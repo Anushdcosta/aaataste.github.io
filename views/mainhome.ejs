@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/header.ejs') %>
+  <body>
+    <%- include("./partials/mainhead.ejs") %> <%-
+    include("./partials/mainnavigation.ejs") %>
+
+    <div class="blogs_content">
+      <ol>
+        <% if (blogs.length > 0) { %> <% if (webpage == 0) { %> <%
+        blogs.forEach(blog => {%>
+        <li>
+          <div>
+            <a class="single" href="/blogs/<%= blog._id %>">
+              <h3 class="title"><%= blog.name%></h3>
+
+              <img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" />
+            </a>
+          </div>
+        </li>
+        <% }) %> <% } else if (webpage > 0) { %> <% blogs.forEach(blog => {%> <%
+        if (blog.categ == webpage) { %>
+        <li>
+          <div>
+            <a class="single" href="/blogs/<%= blog._id %>">
+              <h3 class="title"><%= blog.name%></h3>
+
+              <img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" />
+            </a>
+          </div>
+        </li>
+        <% } %> <% }) %> <% } %> <% } else {%>
+        <p>There are no blogs to display</p>
+        <% } %>
+      </ol>
+    </div>
+    <%- include("./partials/foot.ejs") %>
+  </body>
+</html>
