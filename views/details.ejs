@@ -2,26 +2,68 @@
 <%- include("./partials/header.ejs") %>
 
 <body>
+  <%
+  function generateUniqueRandoms(min, max, count) {
+    let nums = new Set();
+    while(nums.size < count) {
+        let num = Math.floor(Math.random() * (max - min + 1)) + min;
+        if(num !== blog.roll) {
+            nums.add(num);
+        }
+    }
+    return Array.from(nums);
+}
+%>
   <%- include("./partials/mainhead.ejs") %>
   <div>
     <h1 id="title"><%- blog.name %></h1>
+    <% console.log(blogs.length); %>
   </div>
   <img src="<%= blog.thumb %>" alt="" id="mainpicture" />
-  <div class="mainbody">
-    <h2 id="subtitle">Ingredients</h2>
-    <div class="Ingredients">
-      <% let newarr = blog.Ingredients.split("\n")
+  <div class="subsections">
+    <div class="mainbody">
+      <h2 id="subtitle">Ingredients</h2>
+      <div class="Ingredients">
+        <% let newarr = blog.Ingredients.split("\n")
     for (let i = 0; i < newarr.length; i++) {
       if (newarr[i] != "") {%>
-      <input type="checkbox" id="ing">
-      <label for="ing"><%= newarr[i]%> <br></label>
-      <% }} %>
+        <input type="checkbox" id="ing">
+        <label for="ing"><%= newarr[i]%> <br></label>
+        <% }} %>
+      </div>
+      <h2 id="subtitle" class="lobster-regular">Method</h2>
+      <div class="recipe">
+        <% let recipearr = blog.recipe.split("\n")
+    for (let i = 0; i < recipearr.length; i++) {
+      if (recipearr[i] != "") {%>
+        <li><label id="recipe"><%= recipearr[i]%> <br></label></li>
+        <% }} %>
+      </div>
     </div>
-    <h2 id="subtitle">Recipe</h2>
-    <div class="recipe">
-      <label for="ing"><%= blog.recipe%> <br></label>
-    </div>
-  </div>
+    <% let random = generateUniqueRandoms(0, blogs.length-1, 4)
+      console.log(random);%>
+    <div class="subbody">
+      <h1>&star; Other Recipes &star;</h1>
+      <% for (let i=0; i < random.length; i++) {
+          let indice = random[i]
+          sampleblog = blogs[indice]
+          %>
+      <li>
+        <div class="subbodyblogs">
+          <a class="singlesubbody" href="/blogs/<%= sampleblog._id %>">
+            <ul class="innersubelem">
+              <div class="specelem">
+                <li>
+                  <h3 class="title"><%= sampleblog.name%></h3>
+                </li>
+                <li><img class="Thumbnail" src="<%= sampleblog.thumb %>" alt="hello" /></li>
+              </div>
+            </ul>
+          </a>
+          <% }%>
+        </div>
+
+
 </body>
 
 </html>

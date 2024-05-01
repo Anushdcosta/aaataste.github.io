@@ -25,6 +25,9 @@ const blogschema = new Schema(
     thumb: {
       type: String,
     },
+    roll: {
+      type: String,
+    },
   },
   { timestamps: true }
 );

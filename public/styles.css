@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Sedgwick+Ave+Display&display=swap");
 body {
   max-width: 1200px;
   margin: 20px auto;
@@ -191,10 +192,6 @@ a:hover {
   font-family: "Dancing Script";
 }
 
-footer {
-  margin-top: 10px;
-  border-top: 0.5mm solid black;
-}
 .subscribe {
   margin-top: 2%;
   border: 1mm solid black;
@@ -274,6 +271,18 @@ footer {
 }
 /* details page */
 
+.Ingredients {
+  font-size: x-large;
+  text-align: justify;
+  margin-bottom: 1cm;
+}
+.Ingredients input {
+  width: 1cm;
+  height: 1cm;
+  vertical-align: middle;
+  position: relative;
+}
+
 #title {
   text-transform: capitalize;
   font-size: 1cm;
@@ -282,8 +291,12 @@ footer {
 #subtitle {
   font-size: x-large;
   margin: 0%;
-  border-bottom: 0.1em solid black;
   width: 50%;
+  text-align: center;
+  padding-left: 20%;
+  font-family: "lobster";
+  font-size: 1cm;
+  text-decoration: underline;
 }
 
 #mainpicture {
@@ -297,6 +310,45 @@ footer {
 }
 
 .mainbody {
-  width: 65%;
+  width: 96%;
   border: 0.1em solid black;
+  height: fit-content;
+}
+.subsections {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  padding-bottom: 10cm;
+}
+.subbody {
+  text-align: center;
+  height: max-content;
+  list-style-type: none;
+}
+.innersubelem {
+  display: grid;
+  grid-gap: 10px;
+  list-style: none;
+  border: 0.1em solid black;
+  border-radius: 10px;
+  margin-bottom: auto;
+  width: auto;
+  height: auto;
+}
+.innersubelem ul {
+  list-style-type: circle;
+  padding: 1%;
+}
+.specelem {
+  width: auto;
+}
+footer {
+  margin-top: 10px;
+  border-top: 0.5mm solid black;
+}
+
+.subbodyblogs img {
+  scale: 0.8;
+}
+
+#subtitle {
 }
