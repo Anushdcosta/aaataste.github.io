@@ -179,7 +179,7 @@ footer {
   border-top: 0.5mm solid black;
 }
 .subscribe {
-  margin-top: 5%;
+  margin-top: 2%;
   border: 1mm solid black;
   padding: 0.75cm;
   padding-bottom: 0.25cm;
@@ -249,7 +249,9 @@ footer {
   font-family: "Dancing Script";
   font-size: 0.75cm;
 }
-
+.allview {
+  text-align: end;
+}
 /* details page */
 
 #title {
@@ -257,9 +259,7 @@ footer {
   font-size: 1cm;
 }
 
-div {
-  border-bottom: 0.25em solid black;
-}
 img {
   width: 50%;
+  border-bottom: 0.25em solid black;
 }
