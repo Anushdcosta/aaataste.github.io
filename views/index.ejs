@@ -26,7 +26,6 @@
         
         %> <%for (let i = filteredBlogs.length - 1; i >= Math.max(0, filteredBlogs.length - 6); i--) { 
     let blog = filteredBlogs[i];
-    console.log(blog.name, blog.categ, typeof blog);
 %>
 
       <li>
@@ -34,7 +33,6 @@
           <a class="single" href="/blogs/<%= blog._id %>">
 
             <h3 class="title"><%= blog.name%></h3>
-            <% console.log("I can read") %>
             <img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" />
           </a>
         </div>
