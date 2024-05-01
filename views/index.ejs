@@ -5,40 +5,66 @@
 <body>
   <%- include("./partials/mainhead.ejs") %> <%-
     include("./partials/mainnavigation.ejs") %>
-
+  <% function ellipsify (str) {
+    if (str.length > 250) {
+        return (str.substring(0, 250) + "...");
+    }
+    else {
+        return str;
+    }
+} %>
   <div class="blogs_content">
     <ol>
       <% if (blogs.length > 0) { %> <% if (webpage == 0) { %>
       <%for (let i = blogs.length - 1; i >= blogs.length - 6; i--) { blog = blogs[i]%>
 
       <li>
-        <div>
+        <div class="the_whole_blog">
           <a class="single" href="/blogs/<%= blog._id %>">
-            <h3 class="title"><%= blog.name%></h3>
+            <ul class="innerelem">
+              <li><img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" /></li>
+              <li>
+                <ul>
+                  <li>
+                    <h3 class="title"><%= blog.name%></h3>
+                  <li>
 
-            <img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" />
-          </a>
-        </div>
+                    <p id="partinfo"><%= ellipsify(blog.recipe) %></p>
+                  </li>
+              </li>
+            </ul>
       </li>
-      <% } %>
-      <% } else if (webpage > 0) {
+      </ul>
+      </a>
+  </div>
+  </li>
+  <% } %>
+  <% } else if (webpage > 0) {
         let filteredBlogs = blogs.filter(blog => blog.categ == webpage);
         
         %> <%for (let i = filteredBlogs.length - 1; i >= Math.max(0, filteredBlogs.length - 6); i--) { 
     let blog = filteredBlogs[i];
 %>
 
-      <li>
-        <div>
-          <a class="single" href="/blogs/<%= blog._id %>">
+  <li>
+    <div class="the_whole_blog">
+      <a class="single" href="/blogs/<%= blog._id %>">
+        <ul class="innerelem">
+          <li><img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" /></li>
+          <li>
+            <ul>
+              <li>
+                <h3 class="title"><%= blog.name%></h3>
+              <li>
 
-            <h3 class="title"><%= blog.name%></h3>
-            <img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" />
-          </a>
-        </div>
-      </li>
-      <% } %> <%}%> <% } %>
-    </ol>
+                <p id="partinfo"><%= ellipsify(blog.recipe) %></p>
+              </li>
+          </li>
+        </ul>
+  </li>
+  </ul>
+  <% } %> <%}%> <% } %>
+  </ol>
   </div>
   <h4 class="allview"><a href="#">View all &rightarrow;</a></h4>
   <%- include("./partials/foot.ejs") %>
