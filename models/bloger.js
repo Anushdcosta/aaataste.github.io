@@ -15,6 +15,9 @@ const blogschema = new Schema(
       type: String,
       required: true,
     },
+    Ingredients: {
+      type: String,
+    },
     recipe: {
       type: String,
       required: true,

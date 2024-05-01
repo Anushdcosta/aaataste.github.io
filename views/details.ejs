@@ -1,10 +1,27 @@
 <html lang="en">
-  <%- include("./partials/header.ejs") %>
-  <body>
-    <%- include("./partials/mainhead.ejs") %>
-    <div>
-      <h1 id="title"><%- blog.name %></h1>
+<%- include("./partials/header.ejs") %>
+
+<body>
+  <%- include("./partials/mainhead.ejs") %>
+  <div>
+    <h1 id="title"><%- blog.name %></h1>
+  </div>
+  <img src="<%= blog.thumb %>" alt="" id="mainpicture" />
+  <div class="mainbody">
+    <h2 id="subtitle">Ingredients</h2>
+    <div class="Ingredients">
+      <% let newarr = blog.Ingredients.split("\n")
+    for (let i = 0; i < newarr.length; i++) {
+      if (newarr[i] != "") {%>
+      <input type="checkbox" id="ing">
+      <label for="ing"><%= newarr[i]%> <br></label>
+      <% }} %>
     </div>
-    <img src="<%= blog.thumb %>" alt="" />
-  </body>
+    <h2 id="subtitle">Recipe</h2>
+    <div class="recipe">
+      <label for="ing"><%= blog.recipe%> <br></label>
+    </div>
+  </div>
+</body>
+
 </html>

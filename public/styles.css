@@ -51,7 +51,7 @@ ol {
   justify-content: space-between;
   margin-bottom: 30px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #c4c2c2;
   text-transform: uppercase;
 }
 .mainnav ul {
@@ -277,9 +277,26 @@ footer {
 #title {
   text-transform: capitalize;
   font-size: 1cm;
+  border-bottom: 0.1em solid black;
+}
+#subtitle {
+  font-size: x-large;
+  margin: 0%;
+  border-bottom: 0.1em solid black;
+  width: 50%;
 }
 
-img {
+#mainpicture {
   width: 50%;
-  border-bottom: 0.25em solid black;
+  margin-top: 1%;
+  padding-top: 1%;
+}
+
+.recipe {
+  height: auto;
+}
+
+.mainbody {
+  width: 65%;
+  border: 0.1em solid black;
 }
