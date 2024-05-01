@@ -5,11 +5,16 @@ const blogroutes = require("./routes/blogroutes");
 
 const app = express();
 
+const port = 3000;
 const dburi =
   "mongodb+srv://anush:Thephoenix1230984576@cluster0.pqnqxux.mongodb.net/nodetuts?retryWrites=true&w=majority&appName=Cluster0";
 mongoose
   .connect(dburi)
-  .then((results) => app.listen(3000))
+  .then((results) =>
+    app.listen(process.env.Port || port, () =>
+      console.log(`listening on port ${port}`)
+    )
+  )
   .catch((err) => console.log(err));
 
 app.use(express.static("public"));
