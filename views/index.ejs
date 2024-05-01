@@ -21,23 +21,25 @@
         </div>
       </li>
       <% } %>
-      <% } else if (webpage > 0) { ; %> <%blogs.forEach(blog => {
-      newarr = []%> <%
-        if (blog.categ == webpage) {
+      <% } else if (webpage > 0) {
+        let filteredBlogs = blogs.filter(blog => blog.categ == webpage);
         
-        %>
+        %> <%for (let i = filteredBlogs.length - 1; i >= Math.max(0, filteredBlogs.length - 6); i--) { 
+    let blog = filteredBlogs[i];
+    console.log(blog.name, blog.categ, typeof blog);
+%>
+
       <li>
         <div>
           <a class="single" href="/blogs/<%= blog._id %>">
-            <h3 class="title"><%= blog.name%></h3>
 
+            <h3 class="title"><%= blog.name%></h3>
+            <% console.log("I can read") %>
             <img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" />
           </a>
         </div>
       </li>
-      <% } %> <% }) %> <% } %> <% } else {%>
-      <p>There are no blogs to display</p>
-      <% } %>
+      <% } %> <%}%> <% } %>
     </ol>
   </div>
   <h4 class="allview"><a href="#">View all &rightarrow;</a></h4>
