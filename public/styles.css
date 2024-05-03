@@ -300,7 +300,7 @@ a:hover {
 }
 
 #mainpicture {
-  width: 50%;
+  width: 90%;
   margin-top: 1%;
   padding-top: 1%;
 }
@@ -350,4 +350,42 @@ footer {
 
 .subbodyblogs img {
   scale: 0.8;
+}
+
+#yout_video {
+  margin: 1cm;
+  margin-left: 1.5cm;
+  margin-bottom: 0cm;
+}
+
+.side {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 0.65fr 0.35fr;
+}
+
+#uptodate {
+  margin: 10%;
+  border: 0.1cm solid black;
+}
+#uptodate h2 {
+  text-align: center;
+  margin-top: 10%;
+  text-decoration: underline;
+}
+#uptodate ul {
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#uptodate a {
+  margin-left: 1cm;
+  font-size: 20;
+  background-color: #ff0000;
+  padding: 0.2cm;
+  border-radius: 15px;
+  color: #ffffff;
+}
+#uptodate h3 {
+  margin-left: 1cm;
 }

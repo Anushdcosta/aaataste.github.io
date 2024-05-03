@@ -19,7 +19,24 @@
     <h1 id="title"><%- blog.name %></h1>
     <% console.log(blogs.length); %>
   </div>
-  <img src="<%= blog.thumb %>" alt="" id="mainpicture" />
+  <ul class="side">
+    <li>
+      <img src="<%= blog.thumb %>" alt="" id="mainpicture" />
+    </li>
+    <li id="uptodate">
+      <h2>Stay Up To Date</h2>
+      <div>
+        <ul>
+          <li>
+            <h3>Subscribe: </h3>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@MeRecipesAAAtaste?sub_confirmation=1">YouTube</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
   <div class="subsections">
     <div class="mainbody">
       <h2 id="subtitle">Ingredients</h2>
@@ -38,11 +55,18 @@
       if (recipearr[i] != "") {%>
         <li><label id="recipe"><%= recipearr[i]%> <br></label></li>
         <% }} %>
+        <h1 id="subtitle"><br>Video</h1>
+        <%
+        embed_link = "https://www.youtube.com/embed/" + blog.link.split("=")[1]
+        console.log(embed_link);
+        %>
+        <iframe width="600" height="355" src="<%= embed_link%>" id="yout_video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <% let random = generateUniqueRandoms(0, blogs.length-1, 4)
       console.log(random);%>
     <div class="subbody">
+
       <h1>&star; Other Recipes &star;</h1>
       <% for (let i=0; i < random.length; i++) {
           let indice = random[i]
