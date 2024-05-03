@@ -367,6 +367,7 @@ footer {
 #uptodate {
   margin: 10%;
   border: 0.1cm solid black;
+  border-radius: 20px;
 }
 #uptodate h2 {
   text-align: center;
@@ -378,7 +379,7 @@ footer {
   grid-template-columns: 0.25fr 0.75fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
-#uptodate a {
+#you {
   margin-left: 1cm;
   font-size: 20;
   background-color: #ff0000;
@@ -386,6 +387,42 @@ footer {
   border-radius: 15px;
   color: #ffffff;
 }
+#uptodate li {
+  margin-bottom: 20px;
+}
 #uptodate h3 {
   margin-left: 1cm;
+}
+
+#inst {
+  margin-left: 0.8cm;
+  font-size: 20;
+  background-image: linear-gradient(
+    200deg,
+    purple,
+    rgb(255, 0, 123),
+    red,
+    yellow
+  );
+  padding: 0.2cm;
+  border-radius: 15px;
+  color: #ffffff;
+}
+
+#face {
+  margin-left: 1cm;
+  font-size: 20;
+  background-color: rgb(73, 73, 211);
+  padding: 0.2cm;
+  border-radius: 15px;
+  color: #ffffff;
+}
+
+#twitt {
+  margin-left: 1.25cm;
+  font-size: 20;
+  background-color: black;
+  padding: 0.2cm;
+  border-radius: 15px;
+  color: #ffffff;
 }
