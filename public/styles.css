@@ -24,6 +24,7 @@ body::-webkit-scrollbar-thumb {
 .Thumbnail {
   width: 21em;
   height: 11em;
+  border-radius: 20px;
 }
 p,
 h1,
@@ -425,4 +426,78 @@ footer {
   padding: 0.2cm;
   border-radius: 15px;
   color: #ffffff;
+}
+
+.innerallelem {
+  display: grid;
+  grid-gap: 10px;
+  list-style: none;
+  border: 0.1em solid black;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  width: auto;
+  height: auto;
+}
+.content ol {
+  grid-gap: 1px;
+  padding: 0%;
+  margin: 0%;
+}
+#mainl {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-spacing: 2cm;
+  margin-right: 20px;
+  width: min-content;
+  height: min-content;
+  margin-bottom: 35px;
+  margin-left: 1.25cm;
+}
+.content h3 {
+  text-align: left;
+  font-style: oblique;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 200%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+  border-radius: 20px;
+}
+
+.container:hover .overlay {
+  opacity: 0.75;
+  border-radius: 20px;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 1;
+}
+
+#eachvid {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border: 0.1cm solid black;
+  border-radius: 20px;
 }

@@ -4,57 +4,26 @@
 
 <body>
   <%- include("./partials/mainhead.ejs") %>
-  <div class="blogs_content">
-    <ol>
+  <div class="content">
+    <ol id="mainl">
       <% if (blogs.length > 0) { %> <% if (webpage == 0) { %>
-      <%for (let i = blogs.length - 1; i >= blogs.length - 6; i--) { blog = blogs[i]%>
-
-      <li>
-        <div class="the_whole_blog">
-          <a class="single" href="/blogs/<%= blog._id %>">
-            <ul class="innerelem">
-              <li><img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" /></li>
-              <li>
-                <ul>
-                  <li>
-                    <h3 class="title"><%= blog.name%></h3>
-                  <li>
-
-                    <p id="partinfo"><%= ellipsify(blog.recipe) %></p>
-                  </li>
-              </li>
-            </ul>
+      <%blogs.forEach(blog => {%>
+      <li id="eachvid">
+        <a class="singlevid" href="/blogs/<%= blog._id %>">
+          <div class="container">
+            <img src="<%= blog.thumb %>" alt="Avatar" class="Thumbnail">
+            <div class="overlay">
+              <div class="text"><%= blog.name %></div>
+            </div>
+          </div>
+        </a>
       </li>
-      </ul>
-      </a>
+
+      <% }) %>
+
+      <%}%> <% } %>
+    </ol>
   </div>
-  </li>
-  <% } %>
-  <% } else if (webpage > 0) {
-        let filteredBlogs = blogs.filter(blog => blog.categ == webpage);
-        
-        %> <%for (let i = filteredBlogs.length - 1; i >= Math.max(0, filteredBlogs.length - 6); i--) { 
-    let blog = filteredBlogs[i];
-%>
-
-  <li>
-    <div class="the_whole_blog">
-      <a class="single" href="/blogs/<%= blog._id %>">
-        <ul class="innerelem">
-          <li><img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" /></li>
-          <li>
-            <ul>
-              <li>
-                <h3 class="title"><%= blog.name%></h3>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <% } %> <%}%> <% } %>
-        </ol>
-    </div>
-    <h4 class="allview"><a href="/blogs/all_videos">View all &rightarrow;</a></h4>
-    <%-include("./partials/contactus.ejs")%>
-
-    <%- include("./partials/foot.ejs") %>
+  </div>
+  <%- include("./partials/foot.ejs") %>
 </body>

@@ -85,9 +85,8 @@ router.get("/other", (req, res) => {
 });
 router.get("/all_videos", (req, res) => {
   Blog.find()
-
     .then((result) => {
-      res.render("allview", { title: "Blogs", blogs: result, webpage: 4 });
+      res.render("allview", { title: "Blogs", blogs: result, webpage: 0 });
     })
     .catch((err) => {
       console.log("err");
