@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const blogroutes = require("./routes/blogroutes");
+const User = require("./models/account");
 
 const app = express();
 
@@ -34,4 +35,10 @@ app.get("/videos", (req, res) => {
 });
 app.get("/about", (req, res) => {
   res.render("about", { title: "about" });
+});
+app.post("/blogs", (req, res) => {
+  const blog = new User(req.body);
+  blog.save().then((results) => {
+    res.redirect("/blogs");
+  });
 });

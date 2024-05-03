@@ -1,5 +1,6 @@
 const express = require("express");
 const Blog = require("../models/bloger");
+
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -77,6 +78,16 @@ router.get("/other", (req, res) => {
 
     .then((result) => {
       res.render("index", { title: "Blogs", blogs: result, webpage: 6 });
+    })
+    .catch((err) => {
+      console.log("err");
+    });
+});
+router.get("/all_videos", (req, res) => {
+  Blog.find()
+
+    .then((result) => {
+      res.render("allview", { title: "Blogs", blogs: result, webpage: 4 });
     })
     .catch((err) => {
       console.log("err");

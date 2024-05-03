@@ -3,16 +3,7 @@
 <%- include('./partials/header.ejs') %>
 
 <body>
-  <%- include("./partials/mainhead.ejs") %> <%-
-    include("./partials/mainnavigation.ejs") %>
-  <% function ellipsify (str) {
-    if (str.length > 250) {
-        return (str.substring(0, 250) + "...");
-    }
-    else {
-        return str;
-    }
-} %>
+  <%- include("./partials/mainhead.ejs") %>
   <div class="blogs_content">
     <ol>
       <% if (blogs.length > 0) { %> <% if (webpage == 0) { %>
@@ -55,23 +46,15 @@
             <ul>
               <li>
                 <h3 class="title"><%= blog.name%></h3>
-              <li>
-
-                <p id="partinfo"><%= ellipsify(blog.recipe) %></p>
               </li>
+            </ul>
           </li>
         </ul>
-  </li>
-  </ul>
-  <% } %> <%}%> <% } %>
-  </ol>
-  </div>
-  <h4 class="allview"><a href="/blogs/all_videos">View all &rightarrow;</a></h4>
-  <%-include("./partials/contactus.ejs")%>
+        <% } %> <%}%> <% } %>
+        </ol>
+    </div>
+    <h4 class="allview"><a href="/blogs/all_videos">View all &rightarrow;</a></h4>
+    <%-include("./partials/contactus.ejs")%>
 
-
-
-  <%- include("./partials/foot.ejs") %>
+    <%- include("./partials/foot.ejs") %>
 </body>
-
-</html>
