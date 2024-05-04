@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Sedgwick+Ave+Display&display=swap");
 body {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 17px auto;
   padding: 0 20px;
   font-family: "Noto Serif", serif;
   max-width: 1200px;
@@ -38,6 +38,7 @@ ol {
   text-decoration: none;
   color: #222;
   list-style-type: none;
+  text-align: justify;
 }
 .insta {
   transform: scale(2);
@@ -60,6 +61,9 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 .mainnav li {
   list-style-type: none;
@@ -105,6 +109,7 @@ h3 {
   font-style: italic;
   font-stretch: expanded;
   text-justify: auto;
+  text-align: justify;
 }
 a:hover {
   color: crimson;
@@ -125,10 +130,11 @@ a:hover {
   margin-left: 0px;
 }
 .datanav li {
+  font-family: "lobster";
   margin-left: 1.5cm;
   box-shadow: #222;
   font-weight: bolder;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 .channel_name {
   text-align: justify;
@@ -164,6 +170,8 @@ a:hover {
   border: 0.1em solid black;
   border-radius: 10px;
   margin-bottom: 1%;
+  padding-right: 1cm;
+  padding-left: 0.5cm;
 }
 .aboutnav {
   border-bottom: 2px solid #ddd;
@@ -266,6 +274,7 @@ a:hover {
 }
 .allview {
   text-align: end;
+  padding-bottom: 1cm;
 }
 .headerfile {
   list-style-type: none;
@@ -418,7 +427,23 @@ footer {
   border-radius: 15px;
   color: #ffffff;
 }
-
+#aboutsub {
+  text-align: center;
+  padding-bottom: 1cm;
+}
+#aboutsubpara {
+  text-align: justify;
+  padding-bottom: 0.5cm;
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2vw;
+}
+#hp {
+  float: right;
+  margin: 0 0 0 15px;
+  border-radius: 50%;
+}
 #twitt {
   margin-left: 1.25cm;
   font-size: 20;
@@ -500,4 +525,37 @@ footer {
   margin-right: 20px;
   border: 0.1cm solid black;
   border-radius: 20px;
+}
+
+#comment {
+  border-top: 0.01cm solid rgb(59, 55, 55);
+  margin-top: 1cm;
+}
+#comment h2 {
+  font-family: "lobster";
+  text-decoration: underline;
+  padding-top: 0.5cm;
+  text-align: center;
+  font-size: 1cm;
+}
+#comments {
+  display: flex;
+  width: 90%;
+  height: 5cm;
+  margin-left: auto;
+  margin-right: auto;
+}
+#commentsubmit {
+  text-align: end;
+  font-size: 0.65cm;
+  border: 0cm;
+  background-color: transparent;
+  font-weight: bolder;
+  margin-left: 15.5cm;
+  margin-top: 0.5cm;
+}
+#commentsubmit:hover {
+  text-decoration: underline;
+  color: #575353;
+  cursor: pointer;
 }

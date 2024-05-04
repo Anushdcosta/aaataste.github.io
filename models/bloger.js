@@ -28,6 +28,9 @@ const blogschema = new Schema(
     roll: {
       type: String,
     },
+    comments: {
+      type: Array,
+    },
   },
   { timestamps: true }
 );

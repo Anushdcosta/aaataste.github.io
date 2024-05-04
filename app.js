@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const blogroutes = require("./routes/blogroutes");
 const User = require("./models/account");
+const Blog = require("./models/bloger");
 
 const app = express();
 
@@ -19,7 +20,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use(express.static("public"));
-
+app.use(express.json);
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
@@ -42,3 +43,12 @@ app.post("/blogs", (req, res) => {
     res.redirect("/blogs");
   });
 });
+// app.post("/blogs/:id", (req, res) => {
+//   const comment = req.body.comments;
+//   console.log(comment);
+//   const id = req.params.id;
+//   Blog.updateOne(
+//     { _id: id }, // Replace "document_id" with the id of the document you want to update
+//     { $push: { comments: comment } }
+//   );
+// });
