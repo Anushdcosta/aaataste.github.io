@@ -42,3 +42,14 @@ app.post("/blogs", (req, res) => {
     res.redirect("/blogs");
   });
 });
+app.post("/blogs/:id", (req, res) => {
+  const comment = req.body.comments;
+  console.log(comment);
+  const id = req.params.id;
+  Blog.updateOne(
+    { _id: id }, // Replace "document_id" with the id of the document you want to update
+    { $push: { comments: comment } }
+  ).then((result) => {
+    res.redirect(`/blogs/${id}`);
+  });
+});

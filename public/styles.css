@@ -9,6 +9,7 @@ body {
   max-width: 1200px;
   background-color: antiquewhite;
 }
+
 body::-webkit-scrollbar {
   background-color: #ffffff;
   width: 0.25cm;
@@ -136,7 +137,7 @@ a:hover {
   font-weight: bolder;
   font-size: 2vw;
 }
-.channel_name {
+#channel_name {
   text-align: justify;
   font-family: "Dancing Script";
   padding-top: 2.5%;
@@ -544,6 +545,17 @@ footer {
   height: 5cm;
   margin-left: auto;
   margin-right: auto;
+  font-size: 0.65cm;
+  text-align: start;
+  border-radius: 10px;
+  padding: 0.5cm;
+}
+#email {
+  display: flex;
+  margin-left: 1cm;
+  font-size: 0.75cm;
+  border-radius: 10px;
+  margin-bottom: 0.5cm;
 }
 #commentsubmit {
   text-align: end;
@@ -558,4 +570,32 @@ footer {
   text-decoration: underline;
   color: #575353;
   cursor: pointer;
+}
+
+/* For screens between 600px and 1200px */
+@media only screen and (min-width: 400px) and (max-width: 1200px) {
+  body {
+    max-width: 100%;
+    margin: 2%;
+    padding: 0;
+  }
+  .title {
+    font-size: x-large;
+  }
+  .Thumbnail {
+    width: 100%;
+    height: auto;
+  }
+  /* Continue to adjust other elements as needed */
+  #image {
+    width: 20%;
+    height: 20%;
+  }
+  #channel_name {
+    font-size: 1.5cm;
+    text-align: center;
+  }
+  #navi {
+    display: none;
+  }
 }
