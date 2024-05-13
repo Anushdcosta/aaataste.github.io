@@ -578,24 +578,58 @@ footer {
     max-width: 100%;
     margin: 2%;
     padding: 0;
+    width: 115%;
+    overflow: auto; /* or hidden, scroll, etc. */
   }
-  .title {
-    font-size: x-large;
-  }
+
   .Thumbnail {
     width: 100%;
     height: auto;
-  }
+  } */
   /* Continue to adjust other elements as needed */
   #image {
     width: 20%;
     height: 20%;
-  }
+  } */
   #channel_name {
     font-size: 1.5cm;
     text-align: center;
   }
   #navi {
     display: none;
+  }
+  .mainnav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #c4c2c2;
+    text-transform: uppercase;
+  }
+  .aboutnav {
+    display: none;
+  }
+  .datanav { 
+    margin-left: 0.15cm;
+  }
+  .datanav li{ 
+    margin-left: 0%;
+    padding-left: 0%;
+    padding-right: 2%;
+    font-weight: 900;
+    font-size: 0.65cm;
+    white-space: nowrap;
+  }
+  .innerelem {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-gap: 10px;
+    list-style: none;
+    border: 0.1em solid black;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    padding-right: 1cm;
+    padding-left: 0.5cm;
+    margin-right: 0.5cm;
   }
 }
