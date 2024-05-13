@@ -1,6 +1,5 @@
 const express = require("express");
 const Blog = require("../models/bloger");
-var size = require('window-size');
 
 const router = express.Router();
 
@@ -8,7 +7,7 @@ router.get("/", (req, res) => {
   Blog.find()
     .sort({ createdAt: -1 })
     .then((result) => {
-      res.render("index", { sizer: size.get(), blogs: result, webpage: 0  });
+      res.render("index", { sizer: "1", blogs: result, webpage: 0  });
     })
     .catch((err) => {
       console.log("err");
@@ -18,7 +17,7 @@ router.get("/chicken", (req, res) => {
   Blog.find()
 
     .then((result) => {
-      res.render("index", { sizer: size.get(), blogs: result, webpage: 1  });
+      res.render("index", { sizer: "1", blogs: result, webpage: 1  });
     })
     .catch((err) => {
       console.log("err");
@@ -28,7 +27,7 @@ router.get("/seafood", (req, res) => {
   Blog.find()
 
     .then((result) => {
-      res.render("index", { sizer: size.get(), blogs: result, webpage: 2  });
+      res.render("index", { sizer: "1", blogs: result, webpage: 2  });
     })
     .catch((err) => {
       console.log("err");
@@ -38,7 +37,7 @@ router.get("/Mutton", (req, res) => {
   Blog.find()
 
     .then((result) => {
-      res.render("index", { sizer: size.get(), blogs: result, webpage: 3  });
+      res.render("index", { sizer: "1", blogs: result, webpage: 3  });
     })
     .catch((err) => {
       console.log("err");
@@ -48,7 +47,7 @@ router.get("/vegetable", (req, res) => {
   Blog.find()
 
     .then((result) => {
-      res.render("index", { sizer: size.get(), blogs: result, webpage: 4  });
+      res.render("index", { sizer: "1", blogs: result, webpage: 4  });
     })
     .catch((err) => {
       console.log("err");
@@ -58,7 +57,7 @@ router.get("/sweets", (req, res) => {
   Blog.find()
 
     .then((result) => {
-      res.render("index", { sizer: size.get(), blogs: result, webpage: 5  });
+      res.render("index", { sizer: "1", blogs: result, webpage: 5  });
     })
     .catch((err) => {
       console.log("err");
@@ -68,7 +67,7 @@ router.get("/drinks", (req, res) => {
   Blog.find()
 
     .then((result) => {
-      res.render("index", { sizer: size.get() , blogs: result, webpage: 6  });
+      res.render("index", { sizer: "1" , blogs: result, webpage: 6  });
     })
     .catch((err) => {
       console.log("err");
@@ -78,7 +77,7 @@ router.get("/other", (req, res) => {
   Blog.find()
 
     .then((result) => {
-      res.render("index", { sizer: size.get(), blogs: result, webpage: 6  });
+      res.render("index", { sizer: "1", blogs: result, webpage: 6  });
     })
     .catch((err) => {
       console.log("err");
@@ -87,7 +86,7 @@ router.get("/other", (req, res) => {
 router.get("/all_videos", (req, res) => {
   Blog.find()
     .then((result) => {
-      res.render("allview", { sizer: size.get(), blogs: result, webpage: 0  });
+      res.render("allview", { sizer: "1", blogs: result, webpage: 0  });
     })
     .catch((err) => {
       console.log("err");
