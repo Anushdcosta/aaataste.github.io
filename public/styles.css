@@ -573,9 +573,9 @@ footer {
 }
 
 /* For screens between 600px and 1200px */
-@media only screen and (min-width: 400px) and (max-width: 1200px) {
+@media only screen and (min-width: 1.25in) and (max-width: 2.72in) {
   body {
-    max-width: 100%;
+    max-width: 200%;
     margin: 2%;
     padding: 0;
     width: 115%;
@@ -585,19 +585,13 @@ footer {
   .Thumbnail {
     width: 100%;
     height: auto;
-  } */
+  }
   /* Continue to adjust other elements as needed */
   #image {
     width: 20%;
     height: 20%;
-  } */
-  #channel_name {
-    font-size: 1.5cm;
-    text-align: center;
   }
-  #navi {
-    display: none;
-  }
+
   .mainnav {
     display: flex;
     justify-content: space-between;
@@ -605,8 +599,9 @@ footer {
     padding-bottom: 5px;
     border-bottom: 2px solid #c4c2c2;
     text-transform: uppercase;
+    margin-top: 1.5cm;
   }
-  .aboutnav {
+  .aboutnav p{
     display: none;
   }
   .datanav { 
@@ -617,7 +612,7 @@ footer {
     padding-left: 0%;
     padding-right: 2%;
     font-weight: 900;
-    font-size: 0.65cm;
+    font-size: 1.5cm;
     white-space: nowrap;
   }
   .innerelem {
@@ -632,4 +627,19 @@ footer {
     padding-left: 0.5cm;
     margin-right: 0.5cm;
   }
+  .aboutnav img {
+    display: contents;
+  }
+  #channel_name {
+    font-size: 3.5cm;
+    text-align: center;
+    margin-bottom: 0.3cm;
+  }
+  #navi {
+    display: none;
+  }
+  .title {
+    font-size: 2 cm;
+  }
+  
 }
