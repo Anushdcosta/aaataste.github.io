@@ -27,6 +27,11 @@ body::-webkit-scrollbar-thumb {
   height: 11em;
   border-radius: 20px;
 }
+.sThumbnail {
+  width: 21em;
+  height: 11em;
+  border-radius: 20px;
+}
 p,
 h1,
 h2,
@@ -40,6 +45,9 @@ ol {
   color: #222;
   list-style-type: none;
   text-align: justify;
+}
+#nodesign {
+  all: unset;
 }
 .insta {
   transform: scale(2);
@@ -294,6 +302,9 @@ a:hover {
   position: relative;
 }
 
+.headerfile img {
+  width: 300vw;
+}
 #title {
   text-transform: capitalize;
   font-size: 1cm;
@@ -357,6 +368,7 @@ a:hover {
 footer {
   margin-top: 100px;
   border-top: 0.5mm solid black;
+  text-align: center;
 }
 
 .subbodyblogs img {
@@ -419,7 +431,10 @@ footer {
   border-radius: 15px;
   color: #ffffff;
 }
-
+.headerfile 
+.headerfile img {
+  border: 0;
+}
 #face {
   margin-left: 1cm;
   font-size: 20;
@@ -570,76 +585,4 @@ footer {
   text-decoration: underline;
   color: #575353;
   cursor: pointer;
-}
-
-/* For screens between 600px and 1200px */
-@media only screen and (min-width: 1.25in) and (max-width: 2.72in) {
-  body {
-    max-width: 200%;
-    margin: 2%;
-    padding: 0;
-    width: 115%;
-    overflow: auto; /* or hidden, scroll, etc. */
-  }
-
-  .Thumbnail {
-    width: 100%;
-    height: auto;
-  }
-  /* Continue to adjust other elements as needed */
-  #image {
-    width: 20%;
-    height: 20%;
-  }
-
-  .mainnav {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #c4c2c2;
-    text-transform: uppercase;
-    margin-top: 1.5cm;
-  }
-  .aboutnav p{
-    display: none;
-  }
-  .datanav { 
-    margin-left: 0.15cm;
-  }
-  .datanav li{ 
-    margin-left: 0%;
-    padding-left: 0%;
-    padding-right: 2%;
-    font-weight: 900;
-    font-size: 1.5cm;
-    white-space: nowrap;
-  }
-  .innerelem {
-    display: grid;
-    grid-template-columns: 0.5fr 1.5fr;
-    grid-gap: 10px;
-    list-style: none;
-    border: 0.1em solid black;
-    border-radius: 10px;
-    margin-bottom: 1%;
-    padding-right: 1cm;
-    padding-left: 0.5cm;
-    margin-right: 0.5cm;
-  }
-  .aboutnav img {
-    display: contents;
-  }
-  #channel_name {
-    font-size: 3.5cm;
-    text-align: center;
-    margin-bottom: 0.3cm;
-  }
-  #navi {
-    display: none;
-  }
-  .title {
-    font-size: 2 cm;
-  }
-  
 }

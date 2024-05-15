@@ -1,0 +1,111 @@
+@media only screen and (min-width: 115px) and (max-width: 1200px){
+    body {
+      max-width: 100%;
+      margin: 5%;
+      margin-top: 0;
+      margin-left: 0.5%;
+      padding: 0;
+      width: 100%;
+      overflow: auto; /* or hidden, scroll, etc. */
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: #ff00d0;
+      border-radius: 50px;
+    }
+    .Thumbnail {
+      width: 100%;
+      height: 100%;
+    }
+    /* Continue to adjust other elements as needed */
+    #image {
+      width: 15%;
+      height: 15%;
+    }
+  
+    .mainnav {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 30px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #c4c2c2;
+      text-transform: uppercase;
+      margin-top: 15px;
+  
+    }
+    .datanav { 
+      margin-left: 0.15cm;
+    }
+    .datanav li{ 
+      margin-left: 0%;
+      padding-left: 0%;
+      padding-right: 2%;
+      font-weight: 900;
+      font-size: 0.45cm;
+      white-space: nowrap;
+    }
+    .innerelem {
+      display:block;
+      list-style: none;
+      border-radius: 10px;
+      margin-bottom: 1%;
+      padding-right: 1cm;
+      border: 0;
+    }
+    #channel_name {
+      font-size: 1cm;
+      text-align: center;
+      margin-bottom: 0.3cm;
+    }
+    #navi {
+      display: none;
+    }
+    .headerfile img {
+      border: 0;
+      width: 98%;
+    }
+    .aboutnav ul {
+      display: flex;
+    }
+    #aboutme {
+      display: none;
+    }
+  
+    .subcont {
+      height: 70%;
+      position: relative;
+      width: 60%;
+      border: 0.1em solid black;
+    }
+    
+    #partinfo{
+      display: none;
+    }
+    .title {
+      display: none;
+    }
+    .sThumbnail {
+      width: 13.5em;
+      height: 7.5em;
+      border-radius: 20px;
+    }
+    #mainl {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-spacing: 2cm;
+      margin-right: 20px;
+      width: min-content;
+      height: min-content;
+      margin-bottom: 35px;
+      margin-left: 0px;
+    }
+    .text {
+      font-size: 2.75vw;
+      word-wrap: break-word;
+    }
+  }
+  

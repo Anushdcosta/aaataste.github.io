@@ -23,6 +23,7 @@
       <li>
         <div class="the_whole_blog">
           <a class="single" href="/blogs/<%= blog._id %>">
+            <div class="subcont">
             <ul class="innerelem">
               <li><img class="Thumbnail" src="<%= blog.thumb %>" alt="hello" /></li>
               <li>
@@ -30,13 +31,14 @@
                   <li>
                     <h3 class="title"><%= blog.name%></h3>
                   <li>
-
                     <p id="partinfo"><%= ellipsify(blog.recipe) %></p>
                   </li>
+              
               </li>
             </ul>
       </li>
       </ul>
+      </div>
       </a>
   </div>
   </li>
