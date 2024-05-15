@@ -52,9 +52,10 @@
       display:block;
       list-style: none;
       border-radius: 10px;
-      margin-bottom: 1%;
-      padding-right: 1cm;
+      padding: 0%;
       border: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
     #channel_name {
       font-size: 1cm;
@@ -78,14 +79,14 @@
     .subcont {
       height: 70%;
       position: relative;
-      width: 60%;
+      width: 95%;
+      padding: 0;
+      margin: auto;
       border: 0.1em solid black;
+      text-align: center;
     }
     
     #partinfo{
-      display: none;
-    }
-    .title {
       display: none;
     }
     .sThumbnail {
@@ -107,5 +108,42 @@
       font-size: 2.75vw;
       word-wrap: break-word;
     }
+    
+    .Thumbnail {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      vertical-align: middle;
+      margin: auto;
+      margin-top: 10%;
+    }
+    .title {
+      font-size: 20px;
+      margin: auto;
+      width: 85%;
+      padding: 10px;
+    }
+    /* .title {
+      position: absolute;
+      display: table-caption;
+      caption-side: bottom;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+      padding: 10px 20px; 
+      font-family: "DM Serif Display", serif;
+      font-weight: 400;      
+      font-style: normal;
+      font-size: 20px;
+      word-wrap: normal;
+      width: 0;
+      min-width: 100%;
+      text-align: center;
+    }
+     */
   }
   
