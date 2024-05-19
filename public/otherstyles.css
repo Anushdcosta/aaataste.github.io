@@ -42,10 +42,10 @@
     }
     .datanav li{ 
       margin-left: 0%;
-      padding-left: 0%;
+      padding-left: 2%;
       padding-right: 2%;
       font-weight: 900;
-      font-size: 0.35cm;
+      font-size: 100%;
       white-space: nowrap;
     }
     .innerelem {
