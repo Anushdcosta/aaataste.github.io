@@ -7,7 +7,7 @@ body {
   padding: 0 20px;
   font-family: "Noto Serif", serif;
   max-width: 1200px;
-  background-color: antiquewhite;
+  background-color: white;
 }
 
 body::-webkit-scrollbar {
@@ -245,7 +245,7 @@ a:hover {
 }
 .sidebyside {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.75fr 0.25fr;
   grid-gap: 10px;
 }
 .fa {
@@ -257,18 +257,7 @@ a:hover {
   border-radius: 100px;
   scale: 2px;
 }
-.fa-facebook {
-  background: #3b5998;
-  color: white;
-}
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
+
 #info {
   padding-top: 1.5cm;
 }
@@ -387,9 +376,7 @@ footer {
   grid-template-columns: 0.65fr 0.35fr;
 }
 
-#uptodate {
-  margin: 10%;
-  border: 0.1cm solid black;
+#uptodate { 
   border-radius: 20px;
 }
 #uptodate h2 {
@@ -399,26 +386,22 @@ footer {
 }
 #uptodate ul {
   display: grid;
-  grid-template-columns: 0.25fr 0.75fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  width: fit-content;
+  height: 1cm;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #you {
-  margin-left: 1cm;
-  font-size: 20;
-  background-color: #ff0000;
   padding: 0.2cm;
-  border-radius: 15px;
+  border-radius: 30px;
   color: #ffffff;
+  background-color: red;
+  font-size: 0.5cm;
 }
 #uptodate li {
   margin-bottom: 20px;
 }
-#uptodate h3 {
-  margin-left: 1cm;
-}
 
 #inst {
-  margin-left: 0.8cm;
   font-size: 20;
   background-image: linear-gradient(
     200deg,
@@ -428,7 +411,7 @@ footer {
     yellow
   );
   padding: 0.2cm;
-  border-radius: 15px;
+  border-radius: 30px;
   color: #ffffff;
 }
 .headerfile 
@@ -436,9 +419,8 @@ footer {
   border: 0;
 }
 #face {
-  margin-left: 1cm;
+  
   font-size: 20;
-  background-color: rgb(73, 73, 211);
   padding: 0.2cm;
   border-radius: 15px;
   color: #ffffff;
