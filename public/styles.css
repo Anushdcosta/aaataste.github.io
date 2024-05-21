@@ -311,9 +311,12 @@ a:hover {
 }
 
 #mainpicture {
+  text-align: center;
   width: 90%;
   margin-top: 1%;
   padding-top: 1%;
+  margin-right: 1cm;
+  padding-right: 1cm;
 }
 
 .recipe {
@@ -377,17 +380,22 @@ footer {
 }
 
 #uptodate { 
-  border-radius: 20px;
+  border-radius: 20px; 
 }
 #uptodate h2 {
   text-align: center;
   margin-top: 10%;
   text-decoration: underline;
 }
+.allupto {
+  border: #000000 solid;
+  border-radius: 20px;
+}
 #uptodate ul {
   display: grid;
   width: fit-content;
   height: 1cm;
+  margin: 1cm;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #you {
