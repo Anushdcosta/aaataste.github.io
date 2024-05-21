@@ -1,6 +1,6 @@
 @media only screen and (min-width: 115px) and (max-width: 1200px){
     body {
-      max-width: 100%;
+      max-width: 99%;
       margin: 5%;
       margin-top: 0;
       margin-left: 0.5%;
@@ -150,6 +150,35 @@
     #copyright {
       text-align: center;
     }
-    
+    #title {
+      font-size: 3vw;
+    }
+    #uptodate {
+      display: none;
+    }
+    .side {
+      display: block;
+    }
+    #title {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    #mainpicture {
+      width: 95%;
+      margin: 10px;
+      padding: 0;
+    }
+    .mainbody {
+      
+    }
+
+
+
+
+
+
+
+
+
   }
   

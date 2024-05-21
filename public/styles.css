@@ -381,10 +381,11 @@ footer {
 
 #uptodate { 
   border-radius: 20px; 
+  text-align: center;
 }
 #uptodate h2 {
   text-align: center;
-  margin-top: 10%;
+  margin-bottom: 20px;
   text-decoration: underline;
 }
 .allupto {
@@ -393,10 +394,10 @@ footer {
 }
 #uptodate ul {
   display: grid;
+  display: inline-flex;
   width: fit-content;
+
   height: 1cm;
-  margin: 1cm;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #you {
   padding: 0.2cm;
@@ -407,6 +408,7 @@ footer {
 }
 #uptodate li {
   margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 #inst {
@@ -451,11 +453,11 @@ footer {
   border-radius: 50%;
 }
 #twitt {
-  margin-left: 1.25cm;
   font-size: 20;
+  width: 30px;
   background-color: black;
   padding: 0.2cm;
-  border-radius: 15px;
+  border-radius: 20px;
   color: #ffffff;
 }
 
