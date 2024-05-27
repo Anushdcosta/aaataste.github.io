@@ -1,4 +1,4 @@
-@media only screen and (min-width: 115px) and (max-width: 1200px){
+@media only screen and ((min-width: 115px) and (max-width: 1200px)){
     body {
       max-width: 99%;
       margin: 5%;
@@ -168,11 +168,35 @@
       margin: 10px;
       padding: 0;
     }
-
-
-
-
-
+    .subsections {
+      grid-template-columns: 1fr;
+    }
+    .mainbody {
+      width: 100%;
+      margin-right: 50px;
+    }
+    #subtitle {
+      font-size: 4vw;
+    }
+    .recipe {
+      font-size: 10px;
+    }
+    #other {
+      display: none;
+    }
+    #aboutsub {
+      padding-bottom: 0;
+      font-size: 6vw;
+    }
+    #aboutsubpara {
+      font-size: 4vw;
+      margin: 5%;
+    }
+    #hp {
+      margin-top: 10%;
+      width: 25%;
+      height: 25%;
+    }
 
 
   }
