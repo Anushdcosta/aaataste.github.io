@@ -1,6 +1,6 @@
 @media only screen and ((min-width: 115px) and (max-width: 1200px)){
     body {
-      max-width: 99%;
+      max-width: 100%;
       margin: 5%;
       margin-top: 0;
       margin-left: 0.5%;
@@ -40,13 +40,15 @@
     }
     .datanav { 
       margin-left: 0.15cm;
+      
     }
     .datanav li{ 
       margin-left: 0%;
       padding-left: 2%;
       padding-right: 2%;
       font-weight: 900;
-      font-size: 100%;
+      font-size: 2.5vw;
+      
       white-space: nowrap;
     }
     .innerelem {
@@ -120,7 +122,7 @@
       margin-top: 10%;
     }
     .title {
-      font-size: 20px;
+      font-size: 15px;
       margin: auto;
       width: 85%;
       padding: 10px;
@@ -169,17 +171,24 @@
       padding: 0;
     }
     .subsections {
-      grid-template-columns: 1fr;
+      display: block;
+      margin-right: 25px;
+      overflow-x: hidden;
+      width: 100%;
     }
     .mainbody {
-      width: 100%;
-      margin-right: 50px;
+      width: 94%;
+      padding: 0;
+      margin: 2.5%;
     }
     #subtitle {
       font-size: 4vw;
     }
     .recipe {
       font-size: 10px;
+      overflow-wrap: break-word;
+      padding-left: 5px;
+      padding-right: 5px;
     }
     #other {
       display: none;
@@ -197,7 +206,6 @@
       width: 25%;
       height: 25%;
     }
-
 
   }
   
